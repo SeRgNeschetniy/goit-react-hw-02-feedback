@@ -1,4 +1,5 @@
 import { SectionWrapp } from './Section.styled';
+import PropTypes from 'prop-types';
 
 export const Section = ({ title, children }) => (
   <SectionWrapp>
@@ -6,3 +7,8 @@ export const Section = ({ title, children }) => (
     {children}
   </SectionWrapp>
 );
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.arrayOf(PropTypes.object),
+};
